@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { TodoThemeProvider } from "./contexts/todoContext";
 import TodoForm from "./components/TodoForm";
@@ -28,6 +28,18 @@ function App() {
       )
     );
   };
+
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem("todos"));
+
+    if (todos && todos.length > 0) {
+      setTodo(todos);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringfy(todo));
+  }, [todo]);
 
   return (
     <TodoThemeProvider
