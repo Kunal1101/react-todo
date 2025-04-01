@@ -7,16 +7,26 @@ function App() {
   const [todo, setTodo] = useState([]);
 
   const addTodo = (todo) => {
-    setTodo(todo);
+    setTodo((prevTodo) => [{ id: Date.now(), ...todo }, ...todo]);
   };
   const updateTodo = (todo) => {
-    setTodo(todo);
+    setTodo((prevTodo) =>
+      prevTodo.map((prev) => {
+        prev.id === id ? todo : prev;
+      })
+    );
   };
-  const deleteTodo = (todo) => {
-    setTodo(todo);
+  const deleteTodo = (id) => {
+    setTodo((prev) => prev.filter((todo) => todo.id !== id));
   };
-  const toggleComplete = (todo) => {
-    setTodo(todo);
+  const toggleComplete = (id) => {
+    setTodo((prev) =>
+      prev.map((prevTodo) =>
+        prevTodo === id
+          ? { ...prevTodo, completed: !prevTodo.completed }
+          : prevTodo
+      )
+    );
   };
 
   return (
