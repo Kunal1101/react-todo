@@ -1,12 +1,39 @@
-# React + Vite
+# Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Overview
 
-Currently, two official plugins are available:
+This is a React + Vite project that demonstrates the use of **Context API** for state management with **Local Storage**. In this we learn how we can set and get data on local storage and use it with **Context API**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙ Technologies Used
 
-## Expanding the ESLint configuration
+- **React** – Core library
+- **Context API** – To manage global state
+- **Tailwind** – For UI
+- **Local Storage** – For Storing data on browser side
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```sh
+git clone https://github.com/Kunal1101/react-todo
+cd react-todo
+```
+
+### 2️⃣ Install Dependencies
+
+```sh
+npm install
+```
+
+### 3️⃣ Start the Development Server
+
+```sh
+npm start
+```
+
+The app will run at **http://localhost:3000/**.
+
+---
+
+## 🙌 Contributing
+
+Feel free to fork this repo and submit **pull requests**! 🎉
+
+### ⭐ Happy Coding! 🚀
